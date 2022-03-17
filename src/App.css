@@ -1,38 +1,189 @@
 .App {
+  height: 100vh;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  font-family: monospace;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: #1b353d;
+ padding: 10px;
+  border-radius: 10px;
+    }
+a:hover {
+  background-color: rgba(64, 162, 148, 0.61);
+  box-shadow: 5px 5px 15px 5px rgba(57, 113, 129, 0.55);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*-----------Flex----------------*/
+.d-flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.space-btw {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.just-evenly {
+  justify-content: space-evenly;
+}
+.justify-center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.column {
+  flex-direction: column;
+}
+.align-center {
+  align-items: center;
+}
+.j-c-s-around {
+  justify-content: space-around;
+}
+.column-reverse {
+flex-direction: column-reverse;
+}
+.j-c-end {
+  justify-content: end;
+}
+/*----------------------------------*/
+.m-50 {
+  margin: 50px;
+}
+.p-20 {
+  padding: 20px;
+}
+.grow2 {
+   flex: 2;
+ }
+.grow3 {
+  flex: 3;
+}
+.width {
+  width: 200px;
+  margin-left: 30px;
+}
+.w-300 {
+  width: 300px;
+}
+.w-200 {
+  width: 200px;
+}
+.min-400 {
+  min-height: 400px;
+}
+.border {
+  border: 2px solid #594949;
+}
+/*----------------------------------------------------*/
+
+button {
+  height: 40px;
+  width: 180px;
+  background-color: #93e3d7;
+  border-radius: 3px;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #645f55;
+}
+button:hover {
+  background-color: #3cdcc4;
+}
+input {
+  height: 40px;
+  width: 280px;
+  background-color: #e6c7e7;
+  margin: 20px;
+  font-size: 18px;
+  color: #645f55;
+}
+.input {
+  height: 40px;
+  width: 280px;
+  background-color: #e6c7e7;
+  margin: 20px;
+  border: 2px solid black;
+  font-size: 18px;
+  color: #645f55;
+  align-items: center;
+}
+.time {
+  background-color: #e6c7e7;
+  margin-left: 50px;
+  font-size: 16px;
+  color: #645f55;
+}
+.toolbar {
+  width: 90%;
+  height: 50px;
+  padding: 20px;
+  background-color: #93b9ab;
+  color: #323b46;
+  font-size: 25px;
+  margin-left: 55px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.auction-1 {
+  width: 92%;
+}
+.auction {
+   padding: 10px ;
+   margin: 20px;
+   background-color: #d2f1e6;
+  border-radius: 4px;
+ }
+.auction-image {
+  max-width: 300px;
+  max-height: 300px;
+  background-size: 200px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+.info h2 {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.a-header {
+  width: 90%;
+  height: 50px;
+  padding: 10px;
+  margin: 20px;
+  background-color: #a5d9c6;
+  border-radius: 4px;
 }
+.a-header-info {
+  width: 90%;
+  background-color: #a5d9c6;
+}
+.boxOne {
+  background-color: #a5d9c6;
+  color: #645f55;
+  border: none;
+}
+.boxTwo {
+  background-color: #a5d9c6;
+  color: #645f55;
+}
+.link {
+  color:palevioletred;
+}
+/*.box {*/
+/*  width: 100px;*/
+/*  height: 100px;*/
+/*  box-sizing: border-box;*/
+/*  border: 1px solid;*/
+/*}*/
+.title {
+  font-size: 40px;
+  color: #184c5b;
+}
+.bold {
+  font-weight: bold;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
