@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const Toolbar = ({toolbar, setToolbar, userinfo}) => {
     console.log(userinfo)
     return (
-        <div className="d-flex toolbar just-evenly">
+        <div className="d-flex toolbar  align-center just-evenly">
             {!toolbar && <>
                 <Link to="/">Register</Link>
                 <Link to="/login">Login</Link>
@@ -20,14 +20,12 @@ const Toolbar = ({toolbar, setToolbar, userinfo}) => {
                 <Link to="/userAuctions">My Auctions</Link>
 
                 <Link to="/allAuctions">All Auctions</Link>
-                <Link to="/bidHistory">Bids History</Link>
+                <Link to="/bidsHistory">Bids History</Link>
 
-                <button onClick={()=>setToolbar(false)}>Logout</button>
+                <button  onClick={()=>setToolbar(false)}>Logout</button>
             </>
             }
-
         </div>
     );
 };
-
 export default Toolbar;

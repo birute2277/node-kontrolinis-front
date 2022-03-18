@@ -1,6 +1,5 @@
 import React, {useRef} from 'react';
 import {useNavigate} from "react-router-dom";
-// import http from "../plugins/http";
 import axios from "axios";
 import {useState} from "react";
 
@@ -32,13 +31,6 @@ const LoginPage = ({setToolbar, setUserinfo}) => {
 
             } catch (e) {
                 }
-
-                //
-        // http.post(user, "login").then(res => {
-        //     if(res.success) {
-        //        nav('/info')
-        //     }
-        // })
     }
 
     return (

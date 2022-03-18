@@ -1,65 +1,51 @@
-import React, {useEffect, useContext} from 'react';
-import MainContext from "../context/MainContext";
-import axios from "axios";
-
-import SingleCard from "../components/SingleCard";
-import http from "../plugins/http";
+import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import axios from "axios";
+import SingleCard from "../components/SingleCard";
 
 
 const UserAuctionPage = () => {
 
-    let{Items, setItems}= useContext(MainContext)
-
+    const [auctions, setAuctions] = useState()
+    const nav = useNavigate()
     const {id} = useParams()
-    // const [auctions, setAuctions] = useState(null)
 
     useEffect(async () => {
         try {
-            const res = await axios.get("http//localhost:4000/getuserAuctions", {withCredentials: true})
-            setItems(res.data)
+            const res = await axios.get("http://localhost:4000/userAuctions", {withCredentials: true})
+            console.log(res)
+            setAuctions(res.data.posts)
         } catch (e) {
             console.log(e)
         }
-
-        // console.log(id)
-        // // http.get("getSingleAuction/" + id).then(res => {
-        //     http.get("getUserAuction/" + id).then(res => {
-        //     console.log(res)
-        //
-        //     if (res.success) {
-        //          setAuctions(res.auctions)
-        //     }
-
-        // })
 
     }, [])
 
 
     return (
-        <div>
-            <h1>My Auctions</h1>
+        <div className="d-flex column justify-center align-center">
+            <h1 className="title m-50">My Auctions</h1>
 
-            {Items && Items.map((x, i) => {
-                return <SingleCard key = {i} Item = {x}/>
-            })}
-            // })
+            <div className="a-header d-flex ">
+                <h1 className="width">Auction item</h1>
+                <div className="d-flex a-header-info wrap align-center just-evenly">
+                    <h1>Title</h1>
+                    <h1>Last price</h1>
+                    <h1>User</h1>
+                    <h1>Time left</h1>
+                </div>
 
-            {/*{auctions && <div>*/}
-            {/*    <SingleCard item={auctions}/>*/}
-            {/*    <div className="p-20">*/}
-            {/*        /!*{auctions && <CreteComment setAuctions={setAuctions} id={auctions._id}/>}*!/*/}
-            {/*    </div>*/}
-            {/*    <div>*/}
-            {/*        {auctions.comments.map((x, i) => <SingleCard item={x} key={i}/>)}*/}
-            {/*    </div>*/}
+            </div>
+            <div className="auction-1">
+                {auctions && auctions.map((x, i ) =>
+                    <div className="d-flex auction" key={i}>
+                        <SingleCard item={x} />
 
-            {/*</div> }*/}
-
-
+                    </div>)}
+            </div>
 
         </div>
     );
 };
-
 export default UserAuctionPage;

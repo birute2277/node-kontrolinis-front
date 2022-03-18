@@ -16,7 +16,7 @@ const AllAuctions = () => {
             if(res.data.success) {
                 console.log('aukcionai',res.data.posts)
                 setAuctions(res.data.posts)
-                // setToolbar(false)
+                setToolbar(false)
                 nav('/allAuctions')
             }   else {
                 setAuctions(res.data.message)
@@ -28,24 +28,19 @@ const AllAuctions = () => {
 
     }, [])
 
-    // const gotoSingle = (id)=> {
-    //     console.log("click", id)
-    //     nav('/allAuctions/singleAuction/' + id)
-    // }
-
     return (
         <div className="d-flex column justify-center align-center ">
 
             <h1 className="title m-50">All Auctions</h1>
-            <div className="a-header d-flex ">
-                <h2 className="width">Auction item</h2>
-                <div className="d-flex a-header-info wrap just-evenly">
-                    <h2>Title</h2>
-                    <h2>Last price</h2>
-                    <h2>User</h2>
-                    <h2>Create Time</h2>
-                    <h2>Time Left</h2>
 
+
+            <div className="a-header d-flex ">
+                <h1 className="width">Auction item</h1>
+                <div className="d-flex a-header-info wrap align-center just-evenly">
+                    <h1>Title</h1>
+                    <h1>Last price</h1>
+                    <h1>User</h1>
+                    <h1>Time left</h1>
                 </div>
 
             </div>
@@ -53,24 +48,9 @@ const AllAuctions = () => {
                 {auctions && auctions.map((x, i ) =>
                     <div className="d-flex auction" key={i}>
                         <SingleCard item={x} />
-                        {/*<img onClick={()=>gotoSingle(x._id)} className="auction-image" src={x.photo} alt="" />*/}
-                        {/*<div className="info d-flex grow2 wrap just-evenly align-center">*/}
-                        {/*    <h2>{x.title}</h2>*/}
-
-                        {/*    <div className="info d-flex grow3 wrap just-evenly align-center" >*/}
-                        {/*        <h2>{x.currentPrice}</h2>*/}
-                        {/*        <h2>{x.name}</h2>*/}
-                        {/*        <h2>{x.timeCreated}</h2>*/}
-                        {/*        <h2>{}</h2>*/}
-                        {/*    </div>*/}
-                        {/*</div>*/}
 
                     </div>)}
-                {/*<h2>{userinfo.name}</h2>*/}
-
             </div>
-
-            {/*{auctions.map((x, i) => <UserAuctionPage item={x} key={i}/>)}*/}
         </div>
     );
 };

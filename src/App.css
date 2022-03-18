@@ -1,6 +1,7 @@
 .App {
-  height: 100vh;
+  height: 150vh;
   text-align: center;
+
 }
 * {
   font-family: monospace;
@@ -63,11 +64,15 @@ flex-direction: column-reverse;
   flex: 3;
 }
 .width {
-  width: 200px;
-  margin-left: 30px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 60px;
+
 }
 .w-300 {
-  width: 300px;
+  width: 370px;
 }
 .w-200 {
   width: 200px;
@@ -85,7 +90,6 @@ button {
   width: 180px;
   background-color: #93e3d7;
   border-radius: 3px;
-  margin-top: 20px;
   font-size: 18px;
   color: #645f55;
 }
@@ -117,38 +121,60 @@ input {
   color: #645f55;
 }
 .toolbar {
-  width: 90%;
+  width: 95%;
   height: 50px;
   padding: 20px;
   background-color: #93b9ab;
   color: #323b46;
   font-size: 25px;
-  margin-left: 55px;
   border-radius: 4px;
-  font-weight: bold;
+  margin-left: 50px;
 }
 .auction-1 {
   width: 92%;
 }
 .auction {
-   padding: 10px ;
-   margin: 20px;
+   padding: 10px -10px 10px -10px;
+   margin: 30px;
    background-color: #d2f1e6;
   border-radius: 4px;
  }
+.image-box {
+  width: 350px;
+  height: 350px;
+  border: #1b353d 2px solid;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 15px 5px rgba(57, 113, 129, 0.55);
+}
+.image-box:hover {
+  background-color: #93e3d7;
+}
 .auction-image {
   max-width: 300px;
   max-height: 300px;
   background-size: 200px;
-  margin-right: 50px;
   cursor: pointer;
+}
+.info-1 h2{
+  height: 100px;
+  width: 200px;
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .info h2 {
   height: 100px;
-  width: 100px;
+  width: 180px;
   margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 .a-header {
   width: 90%;
   height: 50px;
@@ -173,17 +199,19 @@ input {
 .link {
   color:palevioletred;
 }
-/*.box {*/
-/*  width: 100px;*/
-/*  height: 100px;*/
-/*  box-sizing: border-box;*/
-/*  border: 1px solid;*/
-/*}*/
 .title {
   font-size: 40px;
   color: #184c5b;
 }
 .bold {
   font-weight: bold;
-
+}
+.single-auction {
+  width: 90%;
+  margin: 40px;
+  padding: 20px;
+  background-color: #93e3d7;
+}
+.a-header-info h1 {
+  margin: 0;
 }
