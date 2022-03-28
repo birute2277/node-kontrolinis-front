@@ -215,3 +215,56 @@ input {
 .a-header-info h1 {
   margin: 0;
 }
+/*-------------------------------------------------*/
+
+.font {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #616367;
+}
+.m-50 {
+  margin: 50px;
+}
+
+.sidebar-img {
+  height: 100px;
+  width: 100px;
+  background-size: 100px;
+  cursor: pointer;
+  margin-bottom: 7px;
+}
+.text-blue {
+  text-wrap: normal;
+  color: #2578c9;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.text-grey p {
+  text-wrap: normal;
+  font-size: 14px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.text-box {
+  margin-left: 50px;
+  width: 230px;
+}
+.size-16 {
+  font-size: 16px;
+  margin:5px 0;
+}
+.pointer {
+  cursor: pointer;
+}
+/*-----------FLEX----------*/
+.d-flex {
+   display: flex;
+ }
+
+.m-7-0 {
+  margin: 7px 0;
+}
+.m-t-6 {
+  margin-top: 6px;
+}
+
